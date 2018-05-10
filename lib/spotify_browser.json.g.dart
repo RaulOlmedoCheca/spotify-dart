@@ -679,7 +679,7 @@ abstract class PlaylistMapper {
           ..put('owner', UserMapper.map(object.owner))
           ..put('public', object.public)
           ..put('snapshot_id', object.snapshotId)
-          ..put('tracks', object.tracks?.map(TrackMapper.map)?.toList())
+          ..put('tracks', object.tracks?.map(PlaylistTrackMapper.map)?.toList())
           ..put('type', object.type)
           ..put('uri', object.uri))
         .toMap();
@@ -704,8 +704,9 @@ abstract class PlaylistMapper {
     object.snapshotId = map['snapshot_id'];
 
     // ignore: avoid_as
-    object.tracks =
-        (map['tracks'] as List<dynamic>)?.map(TrackMapper.parse)?.toList();
+    object.tracks = (map['tracks']['items'] as List<Map<String,dynamic>>)
+        ?.map(PlaylistTrackMapper.parse)?.toList();
+
     object.type = map['type'];
     object.uri = map['uri'];
     return object;

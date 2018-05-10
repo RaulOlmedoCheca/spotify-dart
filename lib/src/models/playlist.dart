@@ -55,7 +55,7 @@ class Playlist implements PlaylistSimple {
   TracksLink tracksLink;
 
   /// Information about the tracks of the playlist.
-  List<Track> tracks;
+  List<PlaylistTrack> tracks;
 
   /// The object type: "playlist"
   String type;
