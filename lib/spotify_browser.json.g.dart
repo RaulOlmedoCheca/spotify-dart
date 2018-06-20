@@ -126,8 +126,7 @@ abstract class ArtistMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.popularity = map['popularity'];
     return object;
   }
@@ -289,8 +288,7 @@ abstract class AlbumMapper {
     object.albumType = map['album_type'];
 
     // ignore: avoid_as
-    object.artists = (map['artists'] as List<dynamic>)
-        // ignore: argument_type_not_assignable
+    object.artists = (map['artists'].cast(dynamic))
         ?.map(ArtistSimpleMapper.parse)
         ?.toList();
 
@@ -302,15 +300,13 @@ abstract class AlbumMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.type = map['type'];
     object.uri = map['uri'];
 
     // ignore: avoid_as
-    object.copyrights = (map['copyrights'] as List<dynamic>)
-        // ignore: argument_type_not_assignable
+    object.copyrights = (map['copyrights'].cast(dynamic))
         ?.map(CopyrightMapper.parse)
         ?.toList();
 
@@ -363,8 +359,7 @@ abstract class AlbumSimpleMapper {
     object.albumType = map['album_type'];
 
     // ignore: avoid_as
-    object.artists = (map['artists'] as List<dynamic>)
-        // ignore: argument_type_not_assignable
+    object.artists = (map['artists'].cast(dynamic))
         ?.map(ArtistSimpleMapper.parse)
         ?.toList();
 
@@ -376,8 +371,7 @@ abstract class AlbumSimpleMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.type = map['type'];
     object.uri = map['uri'];
@@ -465,8 +459,7 @@ abstract class TrackMapper {
 
     // ignore: avoid_as
     object.artists =
-        // ignore: argument_type_not_assignable
-        (map['artists'] as List<dynamic>)?.map(ArtistMapper.parse)?.toList();
+        (map['artists'].cast(dynamic))?.map(ArtistMapper.parse)?.toList();
 
     // ignore: avoid_as
     object.availableMarkets =
@@ -530,8 +523,7 @@ abstract class TrackSimpleMapper {
     final TrackSimple object = new TrackSimple();
     // ignore: avoid_as
     object.artists =
-        // ignore: argument_type_not_assignable
-        (map['artists'] as List<dynamic>)?.map(ArtistMapper.parse)?.toList();
+        (map['artists'].cast(dynamic))?.map(ArtistMapper.parse)?.toList();
 
     // ignore: avoid_as
     object.availableMarkets =
@@ -705,8 +697,7 @@ abstract class PlaylistMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.owner = UserMapper.parse(map['owner']);
     object.public = map['public'];
@@ -765,8 +756,7 @@ abstract class PlaylistSimpleMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.owner = UserMapper.parse(map['owner']);
     object.public = map['public'];
@@ -895,8 +885,7 @@ abstract class UserMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.product = map['product'];
     object.type = map['type'];
     object.uri = map['uri'];
@@ -944,8 +933,7 @@ abstract class UserPublicMapper {
 
     // ignore: avoid_as
     object.images =
-        // ignore: argument_type_not_assignable
-        (map['images'] as List<dynamic>)?.map(ImageMapper.parse)?.toList();
+        (map['images'].cast(dynamic))?.map(ImageMapper.parse)?.toList();
     object.type = map['type'];
     object.uri = map['uri'];
     return object;
