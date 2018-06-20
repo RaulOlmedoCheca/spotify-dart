@@ -126,7 +126,7 @@ abstract class ArtistMapper {
 
     // ignore: avoid_as
     object.images =
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.popularity = map['popularity'];
     return object;
   }
@@ -288,7 +288,7 @@ abstract class AlbumMapper {
     object.albumType = map['album_type'];
 
     // ignore: avoid_as
-    object.artists = (map['artists'].cast<dynamic>())
+    object.artists = (map['artists'] as List<Map<String, dynamic>>)
         ?.map(ArtistSimpleMapper.parse)
         ?.toList();
 
@@ -300,13 +300,13 @@ abstract class AlbumMapper {
 
     // ignore: avoid_as
     object.images =
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.type = map['type'];
     object.uri = map['uri'];
 
     // ignore: avoid_as
-    object.copyrights = (map['copyrights'].cast<dynamic>())
+    object.copyrights = (map['copyrights'] as List<Map<String, dynamic>>)
         ?.map(CopyrightMapper.parse)
         ?.toList();
 
@@ -359,7 +359,7 @@ abstract class AlbumSimpleMapper {
     object.albumType = map['album_type'];
 
     // ignore: avoid_as
-    object.artists = (map['artists'].cast<dynamic>())
+    object.artists = (map['artists'] as List<Map<String, dynamic>>)
         ?.map(ArtistSimpleMapper.parse)
         ?.toList();
 
@@ -371,7 +371,7 @@ abstract class AlbumSimpleMapper {
 
     // ignore: avoid_as
     object.images =
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.type = map['type'];
     object.uri = map['uri'];
@@ -459,7 +459,7 @@ abstract class TrackMapper {
 
     // ignore: avoid_as
     object.artists =
-        (map['artists'].cast<dynamic>())?.map(ArtistMapper.parse)?.toList();
+        (map['artists'] as List<Map<String, dynamic>>)?.map(ArtistMapper.parse)?.toList();
 
     // ignore: avoid_as
     object.availableMarkets =
@@ -523,7 +523,7 @@ abstract class TrackSimpleMapper {
     final TrackSimple object = new TrackSimple();
     // ignore: avoid_as
     object.artists =
-        (map['artists'].cast<dynamic>())?.map(ArtistMapper.parse)?.toList();
+        (map['artists'] as List<Map<String, dynamic>>)?.map(ArtistMapper.parse)?.toList();
 
     // ignore: avoid_as
     object.availableMarkets =
@@ -697,7 +697,7 @@ abstract class PlaylistMapper {
 
     // ignore: avoid_as
     object.images =
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.owner = UserMapper.parse(map['owner']);
     object.public = map['public'];
@@ -756,7 +756,7 @@ abstract class PlaylistSimpleMapper {
 
     // ignore: avoid_as
     object.images =
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.name = map['name'];
     object.owner = UserMapper.parse(map['owner']);
     object.public = map['public'];
@@ -886,7 +886,7 @@ abstract class UserMapper {
     // ignore: avoid_as
     object.images =
         // ignore: ble
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.product = map['product'];
     object.type = map['type'];
     object.uri = map['uri'];
@@ -935,7 +935,7 @@ abstract class UserPublicMapper {
     // ignore: avoid_as
     object.images =
         // ignore: ble
-        (map['images'].cast<dynamic>())?.map(ImageMapper.parse)?.toList();
+        (map['images'] as List<Map<String, dynamic>>)?.map(ImageMapper.parse)?.toList();
     object.type = map['type'];
     object.uri = map['uri'];
     return object;
